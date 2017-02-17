@@ -1,0 +1,48 @@
+zte@zte-HP:~$ ifconfig
+eth0      Link encap:Ethernet  HWaddr dc:4a:3e:55:08:33  
+          inet addr:10.62.48.29  Bcast:10.62.48.255  Mask:255.255.255.0
+          inet6 addr: aa:b0::b837:975e:d871:346c/64 Scope:Global
+          inet6 addr: aa:b0::c1b1:63ba:28e2:b5c7/64 Scope:Global
+          inet6 addr: fe80::de4a:3eff:fe55:833/64 Scope:Link
+          inet6 addr: aa:a0::de4a:3eff:fe55:833/64 Scope:Global
+          inet6 addr: aa:b0::5dc5:a6a:2b15:fc52/64 Scope:Global
+          inet6 addr: aa:a0::7443:6c47:6c25:495f/64 Scope:Global
+          inet6 addr: aa:a0::b837:975e:d871:346c/64 Scope:Global
+          inet6 addr: aa:a0::c1b1:63ba:28e2:b5c7/64 Scope:Global
+          inet6 addr: aa:b0::de4a:3eff:fe55:833/64 Scope:Global
+          inet6 addr: aa:a0::5dc5:a6a:2b15:fc52/64 Scope:Global
+          inet6 addr: aa:b0::7443:6c47:6c25:495f/64 Scope:Global
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:104505551 errors:0 dropped:6068159 overruns:0 frame:0
+          TX packets:7337951 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:9665981507 (9.6 GB)  TX bytes:9593305440 (9.5 GB)
+
+eth0:11   Link encap:Ethernet  HWaddr dc:4a:3e:55:08:33  
+          inet addr:192.168.11.1  Bcast:0.0.0.0  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+
+eth0:21   Link encap:Ethernet  HWaddr dc:4a:3e:55:08:33  
+          inet addr:192.168.11.2  Bcast:0.0.0.0  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+
+gtp0      Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  
+          inet addr:172.16.0.1  P-t-P:172.16.0.1  Mask:255.240.0.0
+          inet6 addr: fe80::547f:9f67:20e6:1e5e/64 Scope:Link
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:83 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:21 errors:3 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:5227 (5.2 KB)  TX bytes:1260 (1.2 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:43559 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:43559 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:37562795 (37.5 MB)  TX bytes:37562795 (37.5 MB)
+
+zte@zte-HP:~$ 
+

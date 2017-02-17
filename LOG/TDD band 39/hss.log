@@ -1,0 +1,464 @@
+zte@zte-HP:~/openair-cn-new/SCRIPTS$ sudo ./run_hss 
+OPENAIRCN_DIR   = /home/zte/openair-cn-new
+==== EURECOM OPENAIR-HSS vBranch: develop Abrev. Hash: 9a491b3 Date: Thu Jan 19 11:19:17 2017 +0100 ====
+Please report any bug to: openaircn-user@lists.eurecom.fr
+
+Parsing configuration file: /usr/local/etc/oai/hss.conf
+Configuration
+* Global:
+	- File .............: /usr/local/etc/oai/hss.conf
+* MYSQL:
+	- Server ...........: 127.0.0.1
+	- Database .........: oai_db
+	- User .............: hssadmin
+	- Password .........: *****
+* FreeDiameter:
+	- Conf file ........: /usr/local/etc/oai/freeDiameter/hss_fd.conf
+* Security:
+	- Operator key......: ********************************
+	- Random      ......: false
+Initializing db layer
+Initializing db layer: DONE
+Initialized pseudo-random
+Query: SELECT `imsi`,`key`,`OPc` FROM `users` 
+IMSI: 20834123456789Key: 2b.d6.45.9f.82.c5.b3.00.95.2c.49.10.48.81.ff.48.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='20834123456789'
+IMSI 20834123456789 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 20810000001234Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='20810000001234'
+IMSI 20810000001234 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 31002890832150Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='31002890832150'
+IMSI 31002890832150 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 001010123456789Key: 00.01.02.03.04.05.06.07.08.09.0a.0b.0c.0d.0e.0f.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='001010123456789'
+IMSI 001010123456789 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208930000000001Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208930000000001'
+IMSI 208930000000001 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000002Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000002'
+IMSI 208950000000002 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000003Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000003'
+IMSI 208950000000003 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000004Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000004'
+IMSI 208950000000004 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000005Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000005'
+IMSI 208950000000005 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000001Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000001'
+IMSI 208950000000001 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000006Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000006'
+IMSI 208950000000006 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000007Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000007'
+IMSI 208950000000007 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208930000000002Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208930000000002'
+IMSI 208930000000002 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208930000000003Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208930000000003'
+IMSI 208930000000003 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208930000000004Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208930000000004'
+IMSI 208930000000004 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208930000000005Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208930000000005'
+IMSI 208930000000005 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208930000000006Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208930000000006'
+IMSI 208930000000006 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208930000000007Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208930000000007'
+IMSI 208930000000007 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208940000000007Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208940000000007'
+IMSI 208940000000007 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208940000000006Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208940000000006'
+IMSI 208940000000006 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208940000000005Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208940000000005'
+IMSI 208940000000005 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208940000000004Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208940000000004'
+IMSI 208940000000004 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208940000000003Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208940000000003'
+IMSI 208940000000003 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208940000000002Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208940000000002'
+IMSI 208940000000002 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208940000000001Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208940000000001'
+IMSI 208940000000001 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001100Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001100'
+IMSI 208920100001100 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001101Key: fe.c8.6b.a6.eb.70.7e.d0.89.05.75.7b.1b.b4.4b.8f.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001101'
+IMSI 208920100001101 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001102Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001102'
+IMSI 208920100001102 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001103Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001103'
+IMSI 208920100001103 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001104Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001104'
+IMSI 208920100001104 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001105Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001105'
+IMSI 208920100001105 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001106Key: fe.c8.6b.a6.eb.70.7e.d0.89.05.75.7b.1b.b4.4b.8f.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001106'
+IMSI 208920100001106 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001107Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001107'
+IMSI 208920100001107 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001108Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001108'
+IMSI 208920100001108 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001109Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001109'
+IMSI 208920100001109 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001110Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001110'
+IMSI 208920100001110 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208930100001111Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208930100001111'
+IMSI 208930100001111 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208930100001112Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208930100001112'
+IMSI 208930100001112 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208930100001113Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208930100001113'
+IMSI 208930100001113 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000008Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000008'
+IMSI 208950000000008 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000009Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000009'
+IMSI 208950000000009 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000010Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000010'
+IMSI 208950000000010 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000011Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000011'
+IMSI 208950000000011 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000012Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000012'
+IMSI 208950000000012 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000013Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000013'
+IMSI 208950000000013 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000014Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000014'
+IMSI 208950000000014 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208950000000015Key: 8b.af.47.3f.2f.8f.d0.94.87.cc.cb.d7.09.7c.68.62.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208950000000015'
+IMSI 208950000000015 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001118Key: fe.c8.6b.a6.eb.70.7e.d0.89.05.75.7b.1b.b4.4b.8f.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001118'
+IMSI 208920100001118 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001121Key: fe.c8.6b.a6.eb.70.7e.d0.89.05.75.7b.1b.b4.4b.8f.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001121'
+IMSI 208920100001121 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001119Key: fe.c8.6b.a6.eb.70.7e.d0.89.05.75.7b.1b.b4.4b.8f.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001119'
+IMSI 208920100001119 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 208920100001120Key: fe.c8.6b.a6.eb.70.7e.d0.89.05.75.7b.1b.b4.4b.8f.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='208920100001120'
+IMSI 208920100001120 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 460020000000008Key: 12.34.12.34.12.34.12.34.12.34.12.34.12.34.12.34.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='460020000000008'
+IMSI 460020000000008 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 460020000000007Key: 12.34.12.34.12.34.12.34.12.34.12.34.12.34.12.34.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='460020000000007'
+IMSI 460020000000007 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 460020000000003Key: 12.34.12.34.12.34.12.34.12.34.12.34.12.34.12.34.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='460020000000003'
+IMSI 460020000000003 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+IMSI: 460020000000004Key: 12.34.12.34.12.34.12.34.12.34.12.34.12.34.12.34.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Query: UPDATE `users` SET `OPc`=UNHEX('4340de834d7f30cf4dae8fade6c54686') WHERE `users`.`imsi`='460020000000004'
+IMSI 460020000000004 Updated OPc 4340de834d7f30cf4dae8fade6c54686 -> 4340de834d7f30cf4dae8fade6c54686
+0 rows affected
+Initializing s6a layer
+02/17/17,19:07:32.566446  NOTI   libfdproto '1.2.0' initialized.
+02/17/17,19:07:32.568802  NOTI   libgnutls '3.1.23' initialized.
+02/17/17,19:07:32.569075   DBG   Core state: 0 -> 1
+02/17/17,19:07:32.569084  NOTI   libfdcore '1.2.0' initialized.
+02/17/17,19:07:32.570064   DBG   Generating fresh Diffie-Hellman parameters of size 1024 (this takes some time)... 
+02/17/17,19:07:32.727095   DBG   Loading : /usr/lib/freeDiameter/acl_wl.fdx
+02/17/17,19:07:32.727253  NOTI   Extension ACL_wl initialized with configuration: '/usr/local/etc/oai/freeDiameter/acl.conf'
+02/17/17,19:07:32.727260   DBG   Loading : /usr/lib/freeDiameter/dict_nas_mipv6.fdx
+02/17/17,19:07:32.727340   DBG   Dictionary Extension 'MIPv6 NAS-to-HAAA Interaction' initialized
+02/17/17,19:07:32.727344   DBG   Loading : /usr/lib/freeDiameter/dict_s6a.fdx
+02/17/17,19:07:32.727967  NOTI   Dictionary Extension 'S6A from 3GPP standard v.10.5' initialized
+02/17/17,19:07:32.727973  NOTI   All extensions loaded.
+02/17/17,19:07:32.727999  NOTI   freeDiameter configuration:
+02/17/17,19:07:32.728002  NOTI     Default trace level .... : +1
+02/17/17,19:07:32.728004  NOTI     Configuration file ..... : /usr/local/etc/oai/freeDiameter/hss_fd.conf
+02/17/17,19:07:32.728006  NOTI     Diameter Identity ...... : hss.openair4G.eur (l:17)
+02/17/17,19:07:32.728007  NOTI     Diameter Realm ......... : openair4G.eur (l:13)
+02/17/17,19:07:32.728009  NOTI     Tc Timer ............... : 30
+02/17/17,19:07:32.728025  NOTI     Tw Timer ............... : 30
+02/17/17,19:07:32.728027  NOTI     Local port ............. : 3868
+02/17/17,19:07:32.728028  NOTI     Local secure port ...... : 5868
+02/17/17,19:07:32.728030  NOTI     Number of SCTP streams . : 3
+02/17/17,19:07:32.728032  NOTI     Number of clients thr .. : 5
+02/17/17,19:07:32.728033  NOTI     Number of app threads .. : 4
+02/17/17,19:07:32.728047  NOTI     Local endpoints ........ : Default (use all available)
+02/17/17,19:07:32.728049  NOTI     Local applications ..... : (none)
+02/17/17,19:07:32.728051  NOTI     Flags : - IP ........... : Enabled
+02/17/17,19:07:32.728052  NOTI             - IPv6 ......... : DISABLED
+02/17/17,19:07:32.728054  NOTI             - Relay app .... : DISABLED
+02/17/17,19:07:32.728070  NOTI             - TCP .......... : Enabled
+02/17/17,19:07:32.728072  NOTI             - SCTP ......... : DISABLED
+02/17/17,19:07:32.728075  NOTI             - Pref. proto .. : TCP
+02/17/17,19:07:32.728078  NOTI             - TLS method ... : Separate port
+02/17/17,19:07:32.728092  NOTI     TLS :   - Certificate .. : /usr/local/etc/oai/freeDiameter/hss.cert.pem
+02/17/17,19:07:32.728094  NOTI             - Private key .. : /usr/local/etc/oai/freeDiameter/hss.key.pem
+02/17/17,19:07:32.728097  NOTI             - CA (trust) ... : /usr/local/etc/oai/freeDiameter/hss.cacert.pem (1 certs)
+02/17/17,19:07:32.728099  NOTI             - CRL .......... : (none)
+02/17/17,19:07:32.728118  NOTI             - Priority ..... : (default: 'NORMAL')
+02/17/17,19:07:32.728120  NOTI             - DH bits ...... : 1024
+02/17/17,19:07:32.728122  NOTI     Origin-State-Id ........ : 1487329652
+02/17/17,19:07:32.728126  NOTI   Loaded extensions: '/usr/lib/freeDiameter/acl_wl.fdx'[/usr/local/etc/oai/freeDiameter/acl.conf], loaded
+02/17/17,19:07:32.728142  NOTI   Loaded extensions: '/usr/lib/freeDiameter/dict_nas_mipv6.fdx'[(no config file)], loaded
+02/17/17,19:07:32.728144  NOTI   Loaded extensions: '/usr/lib/freeDiameter/dict_s6a.fdx'[(no config file)], loaded
+02/17/17,19:07:32.728166   DBG   Core state: 1 -> 2
+02/17/17,19:07:32.728706  NOTI   Local server address(es): 10.62.48.29{---L-}	192.168.11.1{---L-}	192.168.11.2{---L-}
+02/17/17,19:07:32.728828   DBG   Core state: 2 -> 3
+Initializing s6a layer: DONE
+02/17/17,19:07:38.649618   DBG   Incoming connection: '{----} TCP srv [0.0.0.0]:3868 (6)' <- 'localhost'   {{----} TCP from [127.0.0.1]:32866 (6<-7)}
+02/17/17,19:07:38.649830   DBG   RCV from '<unknown>': (no model)0/257 f:R--- src:'(nil)' len:232 {C:264/l:28,C:296/l:21,C:278/l:12,C:257/l:14,C:257/l:14,C:257/l:14,C:266/l:12,C:269/l:20,C:267/l:12,C:299/l:12,C:260/l:32,C:265/l:12}
+02/17/17,19:07:38.649856   DBG   Created new peer object for incoming CER: zte-HP.openair4G.eur
+Query: SELECT idmmeidentity FROM mmeidentity WHERE mmeidentity.mmehost='zte-HP.openair4G.eur' 
+Accepting zte-HP.openair4G.eur peer
+02/17/17,19:07:38.650042  NOTI   Connected to 'zte-HP.openair4G.eur' (TCP,soc#7), remote capabilities: 
+02/17/17,19:07:38.650049  NOTI      'Capabilities-Exchange-Request'
+02/17/17,19:07:38.650052  NOTI        Version: 0x01
+02/17/17,19:07:38.650055  NOTI        Length: 232
+02/17/17,19:07:38.650057  NOTI        Flags: 0x80 (R---)
+02/17/17,19:07:38.650060  NOTI        Command Code: 257
+02/17/17,19:07:38.650062  NOTI        ApplicationId: 0
+02/17/17,19:07:38.650065  NOTI        Hop-by-Hop Identifier: 0x7B53C545
+02/17/17,19:07:38.650067  NOTI        End-to-End Identifier: 0x97A0CBE7
+02/17/17,19:07:38.650070  NOTI         {internal data}: src:(nil)(0) rwb:(nil) rt:0 cb:(nil),(nil)((nil)) qry:(nil) asso:1 sess:(nil)
+02/17/17,19:07:38.650072  NOTI         AVP: 'Origin-Host'(264) l=28 f=-M val="zte-HP.openair4G.eur"
+02/17/17,19:07:38.650075  NOTI         AVP: 'Origin-Realm'(296) l=21 f=-M val="openair4G.eur"
+02/17/17,19:07:38.650077  NOTI         AVP: 'Origin-State-Id'(278) l=12 f=-M val=1487329658 (0x58a6d97a)
+02/17/17,19:07:38.650080  NOTI         AVP: 'Host-IP-Address'(257) l=14 f=-M val=10.62.48.29
+02/17/17,19:07:38.650083  NOTI         AVP: 'Host-IP-Address'(257) l=14 f=-M val=192.168.11.1
+02/17/17,19:07:38.650085  NOTI         AVP: 'Host-IP-Address'(257) l=14 f=-M val=192.168.11.2
+02/17/17,19:07:38.650088  NOTI         AVP: 'Vendor-Id'(266) l=12 f=-M val=0 (0x0)
+02/17/17,19:07:38.650090  NOTI         AVP: 'Product-Name'(269) l=20 f=-- val="freeDiameter"
+02/17/17,19:07:38.650107  NOTI         AVP: 'Firmware-Revision'(267) l=12 f=-- val=10200 (0x27d8)
+02/17/17,19:07:38.650109  NOTI         AVP: 'Inband-Security-Id'(299) l=12 f=-M val='NO_INBAND_SECURITY' (0 (0x0))
+02/17/17,19:07:38.650112  NOTI         AVP: 'Vendor-Specific-Application-Id'(260) l=32 f=-M val=(grouped)
+02/17/17,19:07:38.650115  NOTI            AVP: 'Auth-Application-Id'(258) l=12 f=-M val=16777251 (0x1000023)
+02/17/17,19:07:38.650131  NOTI            AVP: 'Vendor-Id'(266) l=12 f=-M val=10415 (0x28af)
+02/17/17,19:07:38.650134  NOTI         AVP: 'Supported-Vendor-Id'(265) l=12 f=-M val=10415 (0x28af)
+02/17/17,19:07:38.650157   DBG   SENT to 'zte-HP.openair4G.eur': 'Capabilities-Exchange-Answer'0/257 f:---- src:'(nil)' len:232 {C:268/l:12,C:264/l:25,C:296/l:21,C:278/l:12,C:257/l:14,C:257/l:14,C:257/l:14,C:266/l:12,C:269/l:20,C:267/l:12,C:260/l:32,C:265/l:12}
+02/17/17,19:07:38.650185  NOTI   No TLS protection negotiated with peer 'zte-HP.openair4G.eur'.
+02/17/17,19:07:38.650196  NOTI   'STATE_CLOSED'	-> 'STATE_OPEN'	'zte-HP.openair4G.eur'
+02/17/17,19:08:10.497584   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Request'0/280 f:R--- src:'(nil)' len:84 {C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:08:10.497872   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:R--- src:'zte-HP.openair4G.eur' len:84 {C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:08:10.498031   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Answer'0/280 f:---- src:'(nil)' len:96 {C:268/l:12,C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:08:10.498317   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:---- src:'zte-HP.openair4G.eur' len:96 {C:268/l:12,C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:08:40.213351   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Request'0/280 f:R--- src:'(nil)' len:84 {C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:08:40.213650   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:R--- src:'zte-HP.openair4G.eur' len:84 {C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:08:40.213769   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Answer'0/280 f:---- src:'(nil)' len:96 {C:268/l:12,C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:08:40.213901   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:---- src:'zte-HP.openair4G.eur' len:96 {C:268/l:12,C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:09:09.638412   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Request'0/280 f:R--- src:'(nil)' len:84 {C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:09:09.638642   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:R--- src:'zte-HP.openair4G.eur' len:84 {C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:09:09.638733   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Answer'0/280 f:---- src:'(nil)' len:96 {C:268/l:12,C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:09:09.638845   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:---- src:'zte-HP.openair4G.eur' len:96 {C:268/l:12,C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:09:40.289022   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Request'0/280 f:R--- src:'(nil)' len:84 {C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:09:40.289273   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:R--- src:'zte-HP.openair4G.eur' len:84 {C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:09:40.289433   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Answer'0/280 f:---- src:'(nil)' len:96 {C:268/l:12,C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:09:40.289608   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:---- src:'zte-HP.openair4G.eur' len:96 {C:268/l:12,C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:10:09.479718   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Request'0/280 f:R--- src:'(nil)' len:84 {C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:10:09.479934   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:R--- src:'zte-HP.openair4G.eur' len:84 {C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:10:09.480051   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Answer'0/280 f:---- src:'(nil)' len:96 {C:268/l:12,C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:10:09.480321   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:---- src:'zte-HP.openair4G.eur' len:96 {C:268/l:12,C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:10:39.831101   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Request'0/280 f:R--- src:'(nil)' len:84 {C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:10:39.831316   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:R--- src:'zte-HP.openair4G.eur' len:84 {C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:10:39.831434   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Answer'0/280 f:---- src:'(nil)' len:96 {C:268/l:12,C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:10:39.831622   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:---- src:'zte-HP.openair4G.eur' len:96 {C:268/l:12,C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:11:09.934436   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Request'0/280 f:R--- src:'(nil)' len:84 {C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:11:09.934646   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:R--- src:'zte-HP.openair4G.eur' len:84 {C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:11:09.934778   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Answer'0/280 f:---- src:'(nil)' len:96 {C:268/l:12,C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:11:09.935053   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:---- src:'zte-HP.openair4G.eur' len:96 {C:268/l:12,C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:11:41.903022   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Request'0/280 f:R--- src:'(nil)' len:84 {C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:11:41.903219   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:R--- src:'zte-HP.openair4G.eur' len:84 {C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:11:41.903332   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Answer'0/280 f:---- src:'(nil)' len:96 {C:268/l:12,C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:11:41.903578   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:---- src:'zte-HP.openair4G.eur' len:96 {C:268/l:12,C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:12:10.444242   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Request'0/280 f:R--- src:'(nil)' len:84 {C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:12:10.444510   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:R--- src:'zte-HP.openair4G.eur' len:84 {C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:12:10.444667   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Answer'0/280 f:---- src:'(nil)' len:96 {C:268/l:12,C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:12:10.444907   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:---- src:'zte-HP.openair4G.eur' len:96 {C:268/l:12,C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:12:38.748753   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Request'0/280 f:R--- src:'(nil)' len:84 {C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:12:38.748921   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:R--- src:'zte-HP.openair4G.eur' len:84 {C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:12:38.749031   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Answer'0/280 f:---- src:'(nil)' len:96 {C:268/l:12,C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:12:38.749371   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:---- src:'zte-HP.openair4G.eur' len:96 {C:268/l:12,C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:12:53.267109   DBG   RCV from 'zte-HP.openair4G.eur': (no model)16777251/318 f:RP-- src:'zte-HP.openair4G.eur' len:268 {C:263/l:48,C:277/l:12,C:264/l:28,C:296/l:21,C:293/l:25,C:283/l:21,C:1/l:23,V:10415/C:1407/l:15,V:10415/C:1408/l:44}
+02/17/17,19:12:53.267293   DBG   DISPATCHING: (no model)16777251/318 f:RP-- src:'zte-HP.openair4G.eur' len:268 {C:263/l:48,C:277/l:12,C:264/l:28,C:296/l:21,C:293/l:25,C:283/l:21,C:1/l:23,V:10415/C:1407/l:15,V:10415/C:1408/l:44,C:282/l:8}
+Converted 64f020 to plmn 460.2
+Query: SELECT `key`,`sqn`,`rand`,`OPc` FROM `users` WHERE `users`.`imsi`='460020000000004' 
+Key: 12.34.12.34.12.34.12.34.12.34.12.34.12.34.12.34.
+Received SQN 00000000000000614322 converted to 614322
+SQN: 00.00.00.09.5f.b2.
+RAND: 04.05.06.07.08.09.0a.0b.0c.0d.0e.0f.10.11.12.13.
+OPc: 43.40.de.83.4d.7f.30.cf.4d.ae.8f.ad.e6.c5.46.86.
+Generated pseudo-random
+RijndaelKeySchedule: K 12341234123412341234123412341234
+MAC_A   : 9f.ec.97.e8.61.2c.b2.55.
+SQN     : 00.00.00.09.5f.b2.
+RAND    : 00.01.02.03.04.05.06.07.08.09.0a.0b.0c.0d.0e.0f.
+RijndaelKeySchedule: K 12341234123412341234123412341234
+AK      : 3d.01.3c.ff.ec.23.
+CK      : e7.18.ed.b9.cb.7c.84.31.18.df.6f.bd.cd.9e.80.50.
+IK      : f4.c8.c6.00.f2.c6.c5.71.3c.dc.91.75.97.97.92.fe.
+XRES    : 44.17.f9.51.a7.47.30.66.
+AUTN    : 3d.01.3c.f6.b3.91.82.34.9f.ec.97.e8.61.2c.b2.55.
+0xe7 0x18 0xed 0xb9 0xcb 0x7c 0x84 0x31 0x18 0xdf 0x6f 0xbd 0xcd 0x9e 0x80 0x50 0xf4 0xc8 0xc6 0x00 0xf2 0xc6 0xc5 0x71 0x3c 0xdc 0x91 0x75 0x97 0x97 0x92 0xfe 
+0x10 0x64 0xf0 0x20 0x00 0x03 0x3d 0x01 0x3c 0xf6 0xb3 0x91 0x00 0x06 
+KASME   : 28.d1.04.00.db.de.bd.47.c4.69.f8.6c.46.3d.50.76.03.1a.55.21.d1.0d.05.5f.92.57.30.31.ef.db.c5.3a.
+Query: UPDATE `users` SET `rand`=UNHEX('000102030405060708090a0b0c0d0e0f'),`sqn`=614322 WHERE `users`.`imsi`='460020000000004'
+1 rows affected
+Query: UPDATE `users` SET `sqn` = `sqn` + 32 WHERE `users`.`imsi`='460020000000004'
+1 rows affected
+02/17/17,19:12:53.269378   DBG   SENT to 'zte-HP.openair4G.eur': 'Authentication-Information-Answer'16777251/318 f:-P-- src:'(nil)' len:288 {C:263/l:48,V:10415/C:1413/l:144,C:277/l:12,C:264/l:25,C:296/l:21,C:268/l:12}
+02/17/17,19:12:53.448068   DBG   RCV from 'zte-HP.openair4G.eur': (no model)16777251/316 f:RP-- src:'zte-HP.openair4G.eur' len:256 {C:263/l:48,C:277/l:12,C:264/l:28,C:296/l:21,C:293/l:25,C:283/l:21,C:1/l:23,V:10415/C:1407/l:15,V:10415/C:1032/l:16,V:10415/C:1405/l:16}
+02/17/17,19:12:53.448225   DBG   DISPATCHING: (no model)16777251/316 f:RP-- src:'zte-HP.openair4G.eur' len:256 {C:263/l:48,C:277/l:12,C:264/l:28,C:296/l:21,C:293/l:25,C:283/l:21,C:1/l:23,V:10415/C:1407/l:15,V:10415/C:1032/l:16,V:10415/C:1405/l:16,C:282/l:8}
+Received new update location request
+Query: SELECT `access_restriction`,`mmeidentity_idmmeidentity`,`msisdn`,`ue_ambr_ul`,`ue_ambr_dl`,`rau_tau_timer` FROM `users` WHERE `users`.`imsi`='460020000000004' 
+Query: SELECT mmehost,mmerealm FROM mmeidentity WHERE mmeidentity.idmmeidentity='46' 
+Query: INSERT INTO `mmeidentity` (`mmehost`,`mmerealm`) SELECT 'zte-HP.openair4G.eur','openair4G.eur' FROM `mmeidentity` WHERE NOT EXISTS (SELECT * FROM `mmeidentity` WHERE `mmehost`='zte-HP.openair4G.eur' AND `mmerealm`='openair4G.eur') LIMIT 1;UPDATE `users`,`mmeidentity` SET `users`.`mmeidentity_idmmeidentity`=`mmeidentity`.`idmmeidentity`, `users`.`ms_ps_status`="NOT_PURGED" WHERE `users`.`imsi`='460020000000004' AND `mmeidentity`.`mmehost`='zte-HP.openair4G.eur' AND `mmeidentity`.`mmerealm`='openair4G.eur'
+0 rows affected
+0 rows affected
+Query: SELECT * FROM `pdn` WHERE `pdn`.`users_imsi`=460020000000004 LIMIT 10; 
+02/17/17,19:12:53.450626   DBG   SENT to 'zte-HP.openair4G.eur': 'Update-Location-Answer'16777251/316 f:-P-- src:'(nil)' len:736 {C:263/l:48,V:10415/C:1406/l:16,V:10415/C:1400/l:576,C:277/l:12,C:264/l:25,C:296/l:21,C:268/l:12}
+02/17/17,19:13:23.685163   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:R--- src:'zte-HP.openair4G.eur' len:84 {C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:13:23.685335   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Answer'0/280 f:---- src:'(nil)' len:96 {C:268/l:12,C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:13:53.919140   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Request'0/280 f:R--- src:'(nil)' len:84 {C:264/l:25,C:296/l:21,C:278/l:12}
+02/17/17,19:13:53.919775   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:---- src:'zte-HP.openair4G.eur' len:96 {C:268/l:12,C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:14:23.722206   DBG   RCV from 'zte-HP.openair4G.eur': (no model)0/280 f:R--- src:'zte-HP.openair4G.eur' len:84 {C:264/l:28,C:296/l:21,C:278/l:12}
+02/17/17,19:14:23.722383   DBG   SENT to 'zte-HP.openair4G.eur': 'Device-Watchdog-Answer'0/280 f:---- src:'(nil)' len:96 {C:268/l:12,C:264/l:25,C:296/l:21,C:278/l:12}
+
+

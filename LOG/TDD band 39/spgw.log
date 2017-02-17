@@ -1,0 +1,403 @@
+zte@zte-HP:~/openair-cn-new/SCRIPTS$ sudo ./run_spgw 
+[sudo] password for zte: 
+OPENAIR_DIR    = 
+Initializing OAI Logging
+000000 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0212    Parsing configuration file found S1u_S12_S4_up: 10.62.48.29/24 on eth0
+000001 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0225    Parsing configuration file found S5_S8_up: 0.0.0.0/24 on none
+000002 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0238    Parsing configuration file found S11: 192.168.11.2/24 on eth0
+000003 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0265    Parsing configuration file provided /usr/local/etc/oai/spgw.conf
+000004 DEBUG SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0283    Parsing configuration file found SGI: on eth0
+000005 DEBUG SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0290    No masquerading for SGI
+000006 DEBUG SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0297    NO CLAMP TCP MSS
+000007 DEBUG SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0352    Parsing configuration file default primary DNS IPv4 address: 8080808
+000008 DEBUG SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0353    Parsing configuration file default secondary DNS IPv4 address: 4040808
+000009 DEBUG SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0361    Protocol configuration options: push MTU, push DNS, IP address allocation via NAS signalling
+000010 DEBUG SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0371    UE MTU : 1500
+000011 DEBUG SPGW-A air-cn-new/SRC/SGW/spgw_config.c:0065    system command: sysctl -w net.ipv4.ip_forward=1
+net.ipv4.ip_forward = 1
+000012 DEBUG SPGW-A air-cn-new/SRC/SGW/spgw_config.c:0065    system command: sync
+000013 DEBUG SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0074    system command: iptables -t mangle -F FORWARD
+000014 DEBUG SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0138    Foung SGI interface MTU=1500
+000015 DEBUG SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0160    Foung S5_S8 interface MTU=1500
+000016 DEBUG SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0074    system command: iptables -t mangle -A OUTPUT -o eth0 -p tcp -m tcp --tcp-flags SYN,RST SYN -s 172.16.0.0/12 -m tcpmss --mss 1361:1600 -j TCPMSS --set-mss 1360
+000017 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0259    ==== EURECOM S/P-GW vBranch: develop Abrev. Hash: 9a491b3 Date: Thu Jan 19 11:19:17 2017 +0100 ====
+000018 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0260    Configuration:
+000019 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0261    - File .................................: /usr/local/etc/oai/spgw.conf
+000020 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0263    - S1-U:
+000021 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0264        port number ......: 2152
+000022 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0265        S1u_S12_S4 iface .....: eth0
+000023 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0266        S1u_S12_S4 ip ........: 10.62.48.29/24
+000024 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0267    - S5-S8:
+000025 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0268        S5_S8 iface ..........: none
+000026 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0269        S5_S8 ip .............: 0.0.0.0/24
+000027 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0270    - S11:
+000028 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0271        S11 iface ............: eth0
+000029 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0272        S11 ip ...............: 192.168.11.2/24
+000030 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0273    - ITTI:
+000031 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0274        queue size .......: 0 (bytes)
+000032 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0275        log file .........: (null)
+000033 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0277    - Logging:
+000034 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0278        Output ..............: CONSOLE
+000035 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0279        Output thread-safe...: false
+000036 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0280        UDP log level........: TRACE
+000037 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0281        GTPV1-U log level....: TRACE
+000038 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0282        GTPV2-C log level....: TRACE
+000039 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0283        S/P-GW APP log level.: TRACE
+000040 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0284        S11 log level........: TRACE
+000041 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0285        UTIL log level.......: INVALID_LOG_LEVEL
+000042 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0286        MSC log level........: INVALID_LOG_LEVEL (MeSsage Chart)
+000043 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0287        ITTI log level.......: INVALID_LOG_LEVEL (InTer-Task Interface)
+000044 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0383    ==== EURECOM S/P-GW vBranch: develop Abrev. Hash: 9a491b3 Date: Thu Jan 19 11:19:17 2017 +0100 ====
+000045 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0384    Configuration:
+000046 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0385    - File .................................: /usr/local/etc/oai/spgw.conf
+000047 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0387    - S5-S8:
+000048 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0388        S5_S8 iface ..........: eth0
+000049 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0389        S5_S8 ip  (read)......: 10.62.48.29
+000050 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0390        S5_S8 MTU (read)......: 1500
+000051 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0391    - SGi:
+000052 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0392        SGi iface ............: eth0
+000053 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0393        SGi ip  (read)........: 10.62.48.29
+000054 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0394        SGi MTU (read)........: 1500
+000055 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0396    - MSS clamping: ..........: 0
+000056 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0397    - Masquerading: ..........: 0
+000057 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0398    - Push PCO: ..............: 1
+000058 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0259    ==== EURECOM S/P-GW vBranch: develop Abrev. Hash: 9a491b3 Date: Thu Jan 19 11:19:17 2017 +0100 ====
+000059 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0260    Configuration:
+000060 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0261    - File .................................: /usr/local/etc/oai/spgw.conf
+000061 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0263    - S1-U:
+000062 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0264        port number ......: 2152
+000063 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0265        S1u_S12_S4 iface .....: eth0
+000064 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0266        S1u_S12_S4 ip ........: 10.62.48.29/24
+000065 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0267    - S5-S8:
+000066 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0268        S5_S8 iface ..........: none
+000067 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0269        S5_S8 ip .............: 0.0.0.0/24
+000068 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0270    - S11:
+000069 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0271        S11 iface ............: eth0
+000070 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0272        S11 ip ...............: 192.168.11.2/24
+000071 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0273    - ITTI:
+000072 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0274        queue size .......: 0 (bytes)
+000073 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0275        log file .........: (null)
+000074 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0277    - Logging:
+000075 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0278        Output ..............: CONSOLE
+000076 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0279        Output thread-safe...: false
+000077 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0280        UDP log level........: TRACE
+000078 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0281        GTPV1-U log level....: TRACE
+000079 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0282        GTPV2-C log level....: TRACE
+000080 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0283        S/P-GW APP log level.: TRACE
+000081 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0284        S11 log level........: TRACE
+000082 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0285        UTIL log level.......: INVALID_LOG_LEVEL
+000083 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0286        MSC log level........: INVALID_LOG_LEVEL (MeSsage Chart)
+000084 INFO  SPGW-A nair-cn-new/SRC/SGW/sgw_config.c:0287        ITTI log level.......: INVALID_LOG_LEVEL (InTer-Task Interface)
+000085 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0383    ==== EURECOM S/P-GW vBranch: develop Abrev. Hash: 9a491b3 Date: Thu Jan 19 11:19:17 2017 +0100 ====
+000086 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0384    Configuration:
+000087 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0385    - File .................................: /usr/local/etc/oai/spgw.conf
+000088 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0387    - S5-S8:
+000089 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0388        S5_S8 iface ..........: eth0
+000090 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0389        S5_S8 ip  (read)......: 10.62.48.29
+000091 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0390        S5_S8 MTU (read)......: 1500
+000092 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0391    - SGi:
+000093 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0392        SGi iface ............: eth0
+000094 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0393        SGi ip  (read)........: 10.62.48.29
+000095 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0394        SGi MTU (read)........: 1500
+000096 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0396    - MSS clamping: ..........: 0
+000097 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0397    - Masquerading: ..........: 0
+000098 INFO  SPGW-A nair-cn-new/SRC/SGW/pgw_config.c:0398    - Push PCO: ..............: 1
+Initializing MSC logs
+Initializing MSC logs Done
+000099 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0352    Initializing UDP task interface
+000100 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0360    Initializing UDP task interface: DONE
+000101 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0259    Initializing S11 interface
+000102 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0218     *----------------------------------------------------------------------------*
+000103 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0219     *                                                                            *
+000104 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0220     *                             n w - g t p v 2 c                              *
+000105 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0221     *    G P R S    T u n n e l i n g    P r o t o c o l   v 2 c   S t a c k     *
+000106 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0222     *                                                                            *
+000107 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0223     *                                                                            *
+000108 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0224     * Copyright (c) 2010-2011 Amit Chawre                                        *
+000109 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0225     * All rights reserved.                                                       *
+000110 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0226     *                                                                            *
+000111 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0227     * Redistribution and use in source and binary forms, with or without         *
+000112 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0228     * modification, are permitted provided that the following conditions         *
+000113 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0229     * are met:                                                                   *
+000114 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0230     *                                                                            *
+000115 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0231     * 1. Redistributions of source code must retain the above copyright          *
+000116 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0232     *    notice, this list of conditions and the following disclaimer.           *
+000117 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0233     * 2. Redistributions in binary form must reproduce the above copyright       *
+000118 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0234     *    notice, this list of conditions and the following disclaimer in the     *
+000119 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0235     *    documentation and/or other materials provided with the distribution.    *
+000120 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0236     * 3. The name of the author may not be used to endorse or promote products   *
+000121 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0237     *    derived from this software without specific prior written permission.   *
+000122 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0238     *                                                                            *
+000123 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0239     * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR       *
+000124 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0240     * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES  *
+000125 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0241     * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.    *
+000126 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0242     * IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,           *
+000127 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0243     * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT   *
+000128 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0244     * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,  *
+000129 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0245     * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY      *
+000130 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0246     * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT        *
+000131 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0247     * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF   *
+000132 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0248     * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.          *
+000133 INFO  GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0249     *----------------------------------------------------------------------------*
+
+000134 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0244    Tx UDP_INIT IP addr 192.168.11.2
+000135 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0301    Initializing S11 interface: DONE
+000136 DEBUG SPGW-A penair-cn-new/SRC/SGW/sgw_task.c:0148    Initializing SPGW-APP  task interface
+000137 DEBUG GTPv1- cn-new/SRC/GTPV1-U/gtpv1u_task.c:0096    Initializing GTPV1U interface
+000138 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0123    Creating new listen socket on address 192.168.11.2 and port 2123
+000139 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0168    Inserting new descriptor for task 6, sd 31
+000140 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0184    Received 1 events
+000141 NOTIC GTPv1- new/SRC/GTPV1-U/gtp_mod_kernel.c:0087    Using the GTP kernel mode (genl ID is 26)
+000142 DEBUG GTPv1- new/SRC/GTPV1-U/gtp_mod_kernel.c:0110    Setting route to reach UE net 172.16.0.0 via gtp0
+000143 NOTIC GTPv1- new/SRC/GTPV1-U/gtp_mod_kernel.c:0117    GTP kernel configured
+000144 DEBUG GTPv1- cn-new/SRC/GTPV1-U/gtpv1u_task.c:0124    Initializing GTPV1U interface: DONE
+000145 DEBUG SPGW-A penair-cn-new/SRC/SGW/sgw_task.c:0208    Initializing SPGW-APP task interface: DONE
+000146 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0184    Received 1 events
+000147 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0102    Looking for sd 31
+000148 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0105    Found matching task desc
+000149 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0209    Inserting new descriptor for task 6, sd 31
+000150 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0236    Msg of length 121 received from 192.168.11.1:2123
+000151 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0180    Processing new data indication from UDP
+000152 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1113    Entering nwGtpv2cProcessUdpReq()
+000153 DEBUG GTPv2- nwgtpv2c-0.11/src/NwGtpv2cTrxn.c:0299      Created outstanding RX transaction 0x0x7faad4000be0
+000154 DEBUG GTPv2- /nwgtpv2c-0.11/src/NwGtpv2cMsg.c:0134      Created message 0x7faad4000cf0!
+000155 DEBUG GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0665      Received IE 3 with instance 0 of length 1 in msg-type 32!
+000156 DEBUG GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0665      Received IE 1 with instance 0 of length 8 in msg-type 32!
+000157 DEBUG GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0665      Received IE 82 with instance 0 of length 1 in msg-type 32!
+000158 DEBUG GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0665      Received IE 99 with instance 0 of length 1 in msg-type 32!
+000159 DEBUG GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0665      Received IE 87 with instance 0 of length 9 in msg-type 32!
+000160 DEBUG GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0665      Received IE 87 with instance 1 of length 5 in msg-type 32!
+000161 ERROR GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0687      Mandatory IE of type 87 and instance 1 incorrect!
+000162 WARNI GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0867      Malformed request message received on TEID 0 from peer 0xc0a80b01. Notifying ULP.
+000163 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0740      Entering nwGtpv2cSendInitialReqIndToUlp()
+000164 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0057         Received initial req indication
+000165 DEBUG GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0203         Received IE 3 of length 1!
+000166 DEBUG S11    nair-cn-new/SRC/S11/s11_common.c:0038         Received IE Parse Indication for of type 3, length 1, instance 0!
+000167 DEBUG GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0203         Received IE 1 of length 8!
+000168 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0073         	- IMSI length 16
+000169 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0074         	-      value  4600200000000040
+000170 DEBUG GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0203         Received IE 82 of length 1!
+000171 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0328         	- RAT type (6): 1004
+000172 DEBUG GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0203         Received IE 99 of length 1!
+000173 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0247         	- PDN type 0
+000174 DEBUG GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0203         Received IE 87 of length 9!
+000175 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0875         	- F-TEID type 10
+000176 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0880         	- TEID/GRE    98001470
+000177 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0888         	- IPv4 addr   192.168.11.1
+000178 DEBUG GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0203         Received IE 87 of length 5!
+000179 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0875         	- F-TEID type 7
+000180 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0880         	- TEID/GRE    00000000
+000181 DEBUG GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0203         Received IE 71 of length 9!
+000182 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:1066         	- APN oai.ipv4
+000183 DEBUG GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0203         Received IE 83 of length 3!
+000184 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0786         	- Serving network 460.2
+000185 DEBUG GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0203         Received IE 78 of length 1!
+000186 DEBUG GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0203         Received IE 93 of length 31!
+000187 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0404         	- EBI 5
+000188 DEBUG GTPv2- /nwgtpv2c-0.11/src/NwGtpv2cMsg.c:0146         Purging message 7faad4000cf0!
+000189 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0750      Leaving nwGtpv2cSendInitialReqIndToUlp() (rc=0)
+000190 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1187    Leaving nwGtpv2cProcessUdpReq() (rc=0)
+000191 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0086    Entering sgw_handle_create_session_request()
+000192 DEBUG SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0121      Rx CREATE-SESSION-REQUEST MME S11 teid 2550142064 S-GW S11 teid 1 APN oai.ipv4 EPS bearer Id 5
+000193 DEBUG SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0122                                IMSI 460020000000004
+000194 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0342      sgw_cm_create_bearer_context_information_in_collection 1
+000195 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0368      Added new s_plus_p_gw_eps_bearer_context_information_t in s11_bearer_context_information_hashtable key teid 1
+000196 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0411      Inserted new EPS bearer entry for EPS bearer id 5 status HASH_TABLE_OK
+000197 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0102      |				5	<-> ebi: 5, enb_teid_for_S1u: 0, s_gw_teid_for_S1u_S12_S4_up: 0 (tbc)
+000198 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0081      +--------------------------------------+
+000199 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0082      | MME <--- S11 TE ID MAPPINGS ---> SGW |
+000200 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0083      +--------------------------------------+
+000201 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0068      | 2550142064	<------------->	1
+000202 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0085      +--------------------------------------+
+000203 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0157      +-----------------------------------------+
+000204 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0158      | S11 BEARER CONTEXT INFORMATION MAPPINGS |
+000205 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0159      +-----------------------------------------+
+000206 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0123      | KEY 1:      
+000207 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0124      |	sgw_eps_bearer_context_information:     |
+000208 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0126      |		imsi_unauthenticated_indicator:	1
+000209 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0128      |		mme_teid_    S11:              	2550142064
+000210 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0130      |		s_gw_teid_S11_S4:              	1
+000211 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0133      |		pdn_connection:
+000212 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0134      |			apn_in_use:        oai.ipv4
+000213 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0135      |			default_bearer:    5
+000214 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0136      |			eps_bearers:
+000215 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0102      |				5	<-> ebi: 5, enb_teid_for_S1u: 0, s_gw_teid_for_S1u_S12_S4_up: 0 (tbc)
+000216 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0161      +--------------------------------------+
+000217 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0352      Entering sgw_handle_gtpv1uCreateTunnelResp()
+000218 DEBUG SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0355         Rx GTPV1U_CREATE_TUNNEL_RESP, Context S-GW S11 teid 1, S-GW S1U teid 1 EPS bearer id 5 status 0
+000219 DEBUG SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0361         Updated eps_bearer_entry_p eps_b_id 5 with SGW S1U teid 1
+000220 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0157         +-----------------------------------------+
+000221 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0158         | S11 BEARER CONTEXT INFORMATION MAPPINGS |
+000222 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0159         +-----------------------------------------+
+000223 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0123         | KEY 1:      
+000224 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0124         |	sgw_eps_bearer_context_information:     |
+000225 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0126         |		imsi_unauthenticated_indicator:	1
+000226 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0128         |		mme_teid_    S11:              	2550142064
+000227 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0130         |		s_gw_teid_S11_S4:              	1
+000228 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0133         |		pdn_connection:
+000229 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0134         |			apn_in_use:        oai.ipv4
+000230 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0135         |			default_bearer:    5
+000231 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0136         |			eps_bearers:
+000232 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0102         |				5	<-> ebi: 5, enb_teid_for_S1u: 0, s_gw_teid_for_S1u_S12_S4_up: 1 (tbc)
+000233 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0161         +--------------------------------------+
+000234 DEBUG SPGW-A openair-cn-new/SRC/SGW/pgw_pco.c:0208         PCO: Protocol identifier IPCP option DNS Server Request
+000235 DEBUG SPGW-A openair-cn-new/SRC/SGW/pgw_pco.c:0225         PCO: Protocol identifier IPCP option Link MTU Request
+000236 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0242         Entering sgw_handle_sgi_endpoint_created()
+000237 DEBUG SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0243            Rx SGI_CREATE_ENDPOINT_RESPONSE,Context: S11 teid 1, SGW S1U teid 1 EPS bearer id 5
+000238 DEBUG SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0320            Tx CREATE-SESSION-RESPONSE SPGW -> TASK_S11, S11 MME teid 2550142064 S11 S-GW teid 1 S1U teid 1 S1U addr 0x1d303e0a EPS bearer id 5 status 16
+000239 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0331         Leaving sgw_handle_sgi_endpoint_created() (rc=0)
+000240 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0464      Leaving sgw_handle_gtpv1uCreateTunnelResp() (rc=-1)
+000241 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0226    Leaving sgw_handle_create_session_request() (rc=0)
+000242 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0187    Received S11_CREATE_SESSION_RESPONSE from S-PGW APP
+000243 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1203    Entering nwGtpv2cProcessUlpReq()
+000244 DEBUG GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1225      Received create local tunnel from ulp
+000245 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0686      Entering nwGtpv2cHandleUlpCreateLocalTunnel()
+000246 DEBUG GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0687         Creating local tunnel with teid '0x1' and peer IP 0x10ba8c0
+000247 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0700      Leaving nwGtpv2cHandleUlpCreateLocalTunnel() (rc=0)
+000248 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1243    Leaving nwGtpv2cProcessUlpReq() (rc=0)
+000249 DEBUG GTPv2- /nwgtpv2c-0.11/src/NwGtpv2cMsg.c:0092    Created message 0x7faad4000cf0!
+000250 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1203    Entering nwGtpv2cProcessUlpReq()
+000251 DEBUG GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1219      Received triggered response from ulp
+000252 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0652      Entering nwGtpv2cHandleUlpTriggeredRsp()
+000253 DEBUG GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0659         Sending response message over seq '0xe4a0'
+000254 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1390         Entering nwGtpv2cStartTimer()
+000256 DEBUG GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1444            Started timer 0x0 for info 0x0x7faad4004300!
+000255 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0085    Looking for task 6
+000257 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1450         Leaving nwGtpv2cStartTimer() (rc=0)
+000258 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0088    Found matching task desc
+000259 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0668      Leaving nwGtpv2cHandleUlpTriggeredRsp() (rc=0)
+000260 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0306    [31] Sending message of size 103 to 192.168.11.1 and port 2123
+000261 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1243    Leaving nwGtpv2cProcessUlpReq() (rc=0)
+000262 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0184    Received 1 events
+000263 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0184    Received 1 events
+000264 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0102    Looking for sd 31
+000265 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0105    Found matching task desc
+000266 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0209    Inserting new descriptor for task 6, sd 31
+000267 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0236    Msg of length 43 received from 192.168.11.1:2123
+000268 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0180    Processing new data indication from UDP
+000269 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1113    Entering nwGtpv2cProcessUdpReq()
+000270 DEBUG GTPv2- nwgtpv2c-0.11/src/NwGtpv2cTrxn.c:0299      Created outstanding RX transaction 0x0x7faad40046a0
+000271 DEBUG GTPv2- /nwgtpv2c-0.11/src/NwGtpv2cMsg.c:0134      Created message 0x7faad40047b0!
+000272 DEBUG GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0665      Received IE 87 with instance 0 of length 5 in msg-type 34!
+000273 ERROR GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0687      Mandatory IE of type 87 and instance 0 incorrect!
+000274 WARNI GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0867      Malformed request message received on TEID 1 from peer 0xc0a80b01. Notifying ULP.
+000275 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0740      Entering nwGtpv2cSendInitialReqIndToUlp()
+000276 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0057         Received initial req indication
+000277 WARNI GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0232         Unexpected IE 87 of length 5 received in msg 34!
+000278 DEBUG GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0203         Received IE 93 of length 18!
+000279 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0404         	- EBI 5
+000280 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0875         	- F-TEID type 0
+000281 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0880         	- TEID/GRE    ca6fe0dd
+000282 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0888         	- IPv4 addr   10.62.48.70
+000283 DEBUG GTPv2- /nwgtpv2c-0.11/src/NwGtpv2cMsg.c:0146         Purging message 7faad40047b0!
+000284 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0750      Leaving nwGtpv2cSendInitialReqIndToUlp() (rc=0)
+000285 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1187    Leaving nwGtpv2cProcessUdpReq() (rc=0)
+000286 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0720    Entering sgw_handle_modify_bearer_request()
+000287 DEBUG SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0722      Rx MODIFY_BEARER_REQUEST, teid 1
+000288 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0081      +--------------------------------------+
+000289 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0082      | MME <--- S11 TE ID MAPPINGS ---> SGW |
+000290 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0083      +--------------------------------------+
+000291 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0068      | 2550142064	<------------->	1
+000292 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0085      +--------------------------------------+
+000293 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0157      +-----------------------------------------+
+000294 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0158      | S11 BEARER CONTEXT INFORMATION MAPPINGS |
+000295 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0159      +-----------------------------------------+
+000296 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0123      | KEY 1:      
+000297 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0124      |	sgw_eps_bearer_context_information:     |
+000298 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0126      |		imsi_unauthenticated_indicator:	1
+000299 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0128      |		mme_teid_    S11:              	2550142064
+000300 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0130      |		s_gw_teid_S11_S4:              	1
+000301 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0133      |		pdn_connection:
+000302 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0134      |			apn_in_use:        oai.ipv4
+000303 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0135      |			default_bearer:    5
+000304 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0136      |			eps_bearers:
+000305 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0102      |				5	<-> ebi: 5, enb_teid_for_S1u: 0, s_gw_teid_for_S1u_S12_S4_up: 1 (tbc)
+000306 DEBUG SPGW-A ew/SRC/SGW/sgw_context_manager.c:0161      +--------------------------------------+
+000307 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0565      Entering sgw_handle_sgi_endpoint_updated()
+000308 DEBUG SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0568         Rx SGI_UPDATE_ENDPOINT_RESPONSE, Context teid 1, SGW S1U teid 1, eNB S1U teid 3396329693, EPS bearer id 5, status 0
+000309 DEBUG SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0599         Rx SGI_UPDATE_ENDPOINT_RESPONSE: REQUEST_ACCEPTED
+000310 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0634      Leaving sgw_handle_sgi_endpoint_updated() (rc=0)
+000311 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0792    Leaving sgw_handle_modify_bearer_request() (rc=-1)
+000312 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0193    Received S11_MODIFY_BEARER_RESPONSE from S-PGW APP
+000313 DEBUG GTPv2- /nwgtpv2c-0.11/src/NwGtpv2cMsg.c:0092    Created message 0x7faad40047b0!
+000314 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1203    Entering nwGtpv2cProcessUlpReq()
+000315 DEBUG GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1219      Received triggered response from ulp
+000316 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0652      Entering nwGtpv2cHandleUlpTriggeredRsp()
+000317 DEBUG GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0659         Sending response message over seq '0xe4a1'
+000318 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1390         Entering nwGtpv2cStartTimer()
+000319 DEBUG GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1437            Already Started timer 0x0 for info 0x0x7faad4004300!
+000320 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0085    Looking for task 6
+000322 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0088    Found matching task desc
+000321 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1439         Leaving nwGtpv2cStartTimer() (rc=0)
+000323 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0306    [31] Sending message of size 18 to 192.168.11.1 and port 2123
+000324 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0668      Leaving nwGtpv2cHandleUlpTriggeredRsp() (rc=0)
+000325 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1243    Leaving nwGtpv2cProcessUlpReq() (rc=0)
+000326 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0184    Received 1 events
+000327 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0212    Received event TIMER_HAS_EXPIRED for timer_id 0x7faad4000920 and arg 0x7faad4004300
+000328 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1315    Entering nwGtpv2cProcessTimeout()
+000329 DEBUG GTPv2- nwgtpv2c-0.11/src/NwGtpv2cTrxn.c:0113      Duplicate request hold timer expired for transaction 0x0x7faad4000be0
+000330 DEBUG GTPv2- /nwgtpv2c-0.11/src/NwGtpv2cMsg.c:0146      Purging message 7faad4000cf0!
+000331 DEBUG GTPv2- nwgtpv2c-0.11/src/NwGtpv2cTrxn.c:0328      Purging  transaction 0x0x7faad4000be0
+000332 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1367    Leaving nwGtpv2cProcessTimeout() (rc=0)
+000333 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0212    Received event TIMER_HAS_EXPIRED for timer_id 0x7faad4000920 and arg 0x7faad4007b00
+000334 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1315    Entering nwGtpv2cProcessTimeout()
+000335 DEBUG GTPv2- nwgtpv2c-0.11/src/NwGtpv2cTrxn.c:0113      Duplicate request hold timer expired for transaction 0x0x7faad40046a0
+000336 DEBUG GTPv2- /nwgtpv2c-0.11/src/NwGtpv2cMsg.c:0146      Purging message 7faad40047b0!
+000337 DEBUG GTPv2- nwgtpv2c-0.11/src/NwGtpv2cTrxn.c:0328      Purging  transaction 0x0x7faad40046a0
+000338 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1367    Leaving nwGtpv2cProcessTimeout() (rc=0)
+000339 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0184    Received 1 events
+000340 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0102    Looking for sd 31
+000341 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0105    Found matching task desc
+000342 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0209    Inserting new descriptor for task 6, sd 31
+000343 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0236    Msg of length 35 received from 192.168.11.1:2123
+000344 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0180    Processing new data indication from UDP
+000345 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1113    Entering nwGtpv2cProcessUdpReq()
+000346 DEBUG GTPv2- nwgtpv2c-0.11/src/NwGtpv2cTrxn.c:0299      Created outstanding RX transaction 0x0x7faad40046a0
+000347 DEBUG GTPv2- /nwgtpv2c-0.11/src/NwGtpv2cMsg.c:0134      Created message 0x7faad40047b0!
+000348 DEBUG GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0665      Received IE 87 with instance 0 of length 9 in msg-type 36!
+000349 WARNI GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0727      Unexpected IE 87 with instance 0 of length 9 received in msg 36!
+000350 DEBUG GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0665      Received IE 73 with instance 0 of length 1 in msg-type 36!
+000351 DEBUG GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0665      Received IE 77 with instance 3 of length 1 in msg-type 36!
+000352 WARNI GTPv2- .11/src/NwGtpv2cMsgIeParseInfo.c:0727      Unexpected IE 77 with instance 3 of length 1 received in msg 36!
+000353 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0740      Entering nwGtpv2cSendInitialReqIndToUlp()
+000354 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0057         Received initial req indication
+000355 DEBUG GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0203         Received IE 87 of length 9!
+000356 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0875         	- F-TEID type 10
+000357 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0880         	- TEID/GRE    98001470
+000358 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0888         	- IPv4 addr   192.168.11.1
+000359 DEBUG GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0203         Received IE 73 of length 1!
+000360 DEBUG S11    n-new/SRC/S11/s11_ie_formatter.c:0404         	- EBI 5
+000361 WARNI GTPv2- v2c-0.11/src/NwGtpv2cMsgParser.c:0232         Unexpected IE 77 of length 1 received in msg 36!
+000362 DEBUG GTPv2- /nwgtpv2c-0.11/src/NwGtpv2cMsg.c:0146         Purging message 7faad40047b0!
+000363 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0750      Leaving nwGtpv2cSendInitialReqIndToUlp() (rc=0)
+000364 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1187    Leaving nwGtpv2cProcessUdpReq() (rc=0)
+000365 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0808    Entering sgw_handle_delete_session_request()
+000366 WARNI SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0816      Delete session handler needs to be completed...
+000367 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0665      Entering sgw_handle_sgi_endpoint_deleted()
+000368 DEBUG SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0668         bcom Rx SGI_DELETE_ENDPOINT_REQUEST, Context teid 1, SGW S1U teid 1, EPS bearer id 5
+000369 DEBUG SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0678         Rx SGI_DELETE_ENDPOINT_REQUEST: REQUEST_ACCEPTED
+000370 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0691      Leaving sgw_handle_sgi_endpoint_deleted() (rc=0)
+000371 TRACE SPGW-A ir-cn-new/SRC/SGW/sgw_handlers.c:0864    Leaving sgw_handle_delete_session_request() (rc=0)
+000372 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0199    Received S11_DELETE_SESSION_RESPONSE from S-PGW APP
+000373 DEBUG GTPv2- /nwgtpv2c-0.11/src/NwGtpv2cMsg.c:0092    Created message 0x7faad40047b0!
+000374 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1203    Entering nwGtpv2cProcessUlpReq()
+000375 DEBUG GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1219      Received triggered response from ulp
+000376 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0652      Entering nwGtpv2cHandleUlpTriggeredRsp()
+000377 DEBUG GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0659         Sending response message over seq '0xe4a2'
+000378 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1390         Entering nwGtpv2cStartTimer()
+000379 DEBUG GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1444            Started timer 0x0 for info 0x0x7faad4007b00!
+000380 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1450         Leaving nwGtpv2cStartTimer() (rc=0)
+000381 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:0668      Leaving nwGtpv2cHandleUlpTriggeredRsp() (rc=0)
+000382 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1243    Leaving nwGtpv2cProcessUlpReq() (rc=0)
+000383 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0085    Looking for task 6
+000384 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0088    Found matching task desc
+000385 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0306    [31] Sending message of size 18 to 192.168.11.1 and port 2123
+000386 DEBUG UDP    /SRC/UDP/udp_primitives_server.c:0184    Received 1 events
+000387 DEBUG S11    openair-cn-new/SRC/S11/s11_sgw.c:0212    Received event TIMER_HAS_EXPIRED for timer_id 0x7faad4008930 and arg 0x7faad4007b00
+000388 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1315    Entering nwGtpv2cProcessTimeout()
+000389 DEBUG GTPv2- nwgtpv2c-0.11/src/NwGtpv2cTrxn.c:0113      Duplicate request hold timer expired for transaction 0x0x7faad40046a0
+000390 DEBUG GTPv2- /nwgtpv2c-0.11/src/NwGtpv2cMsg.c:0146      Purging message 7faad40047b0!
+000391 DEBUG GTPv2- nwgtpv2c-0.11/src/NwGtpv2cTrxn.c:0328      Purging  transaction 0x0x7faad40046a0
+000392 TRACE GTPv2- 2-C/nwgtpv2c-0.11/src/NwGtpv2c.c:1367    Leaving nwGtpv2cProcessTimeout() (rc=0)
+
+
