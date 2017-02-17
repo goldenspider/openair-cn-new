@@ -297,7 +297,7 @@ s1ap_mme_handle_s1_setup_request (
     max_enb_connected = mme_config.max_enbs;
     mme_config_unlock (&mme_config);
 
-    if (nb_enb_associated == max_enb_connected) {
+    if (nb_enb_associated > max_enb_connected) {
       OAILOG_ERROR (LOG_S1AP, "There is too much eNB connected to MME, rejecting the association\n");
       OAILOG_DEBUG (LOG_S1AP, "Connected = %d, maximum allowed = %d\n", nb_enb_associated, max_enb_connected);
       /*
