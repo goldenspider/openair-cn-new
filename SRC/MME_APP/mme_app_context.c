@@ -496,7 +496,7 @@ mme_insert_ue_context (
   if (HASH_TABLE_OK == h_rc) {
     OAILOG_DEBUG (LOG_MME_APP, "This ue context %p already exists enb_ue_s1ap_id " ENB_UE_S1AP_ID_FMT "\n",
         ue_context_p, ue_context_p->enb_ue_s1ap_id);
-    OAILOG_FUNC_RETURN (LOG_MME_APP, RETURNerror);
+    hashtable_ts_free(mme_ue_context_p->enb_ue_s1ap_id_ue_context_htbl, (const hash_key_t)ue_context_p->enb_s1ap_id_key);
   }
   h_rc = hashtable_ts_insert (mme_ue_context_p->enb_ue_s1ap_id_ue_context_htbl,
                              (const hash_key_t)ue_context_p->enb_s1ap_id_key,
