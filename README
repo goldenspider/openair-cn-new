@@ -8,7 +8,28 @@
   Openair-cn is an implementation of the 3GPP specifications concerning the 
   Evolved Packet Core Networks, that means it contains the implementation of the
   following network elements: MME, HSS, S-GW, P-GW.
-  
+#------------------------------------------------------------------------------
+UE info
+
+KI：12341234123412341234123412341234
+OPC：4340DE834D7F30CF4DAE8FADE6C54686
+AMP：8234
+PLMN：64F020
+Authentication algorithm：milenage
+IMSI： 46002XXXXXXXXXX
+
+#------------------------------------------------------------------------------
+Network
+
+sudo ip addr add 192.168.11.1/24 dev eth0 label eth0:11 s11mme
+sudo ip addr add 192.168.11.2/24 dev eth0 label eth0:21 s11sgw
+eth0 inet 10.62.48.29 s1cmme  sctp port 5000
+
+cenb 10.62.48.70
+uenb 10.62.48.70
+
+s6a hss <--> mme 127.0.0.1
+
 #---------------------
 Licence info  
 #---------------------
