@@ -153,7 +153,7 @@ generate_vector (
    * * * * - AUTN
    * * * * - KASME
    */
-  uint8_t                                 amf[] = { 0x80, 0x00 };
+  uint8_t                                 amf[] = { 0x82, 0x34 };
   uint8_t                                 mac_a[8];
   uint8_t                                 ck[16];
   uint8_t                                 ik[16];

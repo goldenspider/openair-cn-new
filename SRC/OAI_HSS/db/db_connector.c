@@ -581,10 +581,11 @@ hss_mysql_check_opc_keys (
   char                                    query[1000];
   char                                    update[1000];
   uint8_t                                 k[16];
-  uint8_t                                 opc[16];
+
   int                                     update_length = 0;
   int                                     status = 0;
   int                                     i;
+  uint8_t                                 opc[16]= {0x43,0x40,0xDE,0x83,0x4D,0x7F,0x30,0xCF,0x4D,0xAE,0x8F,0xAD,0xE6,0xC5,0x46,0x86};
 
   if (db_desc->db_conn == NULL) {
     return EINVAL;
@@ -621,7 +622,8 @@ hss_mysql_check_opc_keys (
       {
         print_buffer ("OPc: ", (uint8_t *) row[2], KEY_LENGTH);
         //} else {
-        ComputeOPc (k, opP, opc);
+        //ComputeOPc (k, opP, opc);
+
         update_length = sprintf (update, "UPDATE `users` SET `OPc`=UNHEX('");
 
         for (i = 0; i < KEY_LENGTH; i++) {
