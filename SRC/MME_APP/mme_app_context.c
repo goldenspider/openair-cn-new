@@ -191,7 +191,7 @@ void mme_app_move_context (ue_context_t *dst, ue_context_t *src)
     //enb_s1ap_id_key
     //enb_ue_s1ap_id
     //mme_ue_s1ap_id
-    dst->sctp_assoc_id_key       = src->sctp_assoc_id_key;
+    //dst->sctp_assoc_id_key       = src->sctp_assoc_id_key;
     dst->subscription_known      = src->subscription_known;
     memcpy((void *)dst->msisdn, (const void *)src->msisdn, sizeof(src->msisdn));
     dst->msisdn_length           = src->msisdn_length;src->msisdn_length = 0;
